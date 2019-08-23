@@ -20,18 +20,18 @@
         console.log(sum(8));
         
         
-        function counter() {
+        function counter(first, step) {
             let i = 0;
-            return function (first, step) {
-                i += first + step;
-                return i;
+            return function () {
+                i += step;
+                return i + first;
             };
         }
         
-        let counter1 = counter();
-        console.log(counter1(5,2));
-        console.log(counter1(10,5));
-        console.log(counter1(20,10));
+        let counter1 = counter(5,2);
+        console.log(counter1());
+        console.log(counter1());
+        console.log(counter1());
     </script>
 </body>
 </html>
