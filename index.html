@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Lesson_10</title>
+</head>
+<body>
+    <script>
+        function count() {
+            let a = 0;
+            return function(b) {
+                a += b;
+                return a;
+            };
+        }
+        
+        let sum = count();
+        console.log(sum(2));
+        console.log(sum(5));
+        console.log(sum(8));
+        
+        
+        function counter() {
+            let i = 0;
+            return function (first, step) {
+                i += first + step;
+                return i;
+            };
+        }
+        
+        let counter1 = counter();
+        console.log(counter1(5,2));
+        console.log(counter1(10,5));
+        console.log(counter1(20,10));
+    </script>
+</body>
+</html>
+
+
